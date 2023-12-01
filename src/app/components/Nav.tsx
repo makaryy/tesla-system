@@ -19,7 +19,7 @@ const links = [
     }
 ];
 
-const NavDesktop = () => {
+const Nav = () => {
     const [open, setOpen] = useState(false);
     return (
         <>
@@ -62,4 +62,4 @@ const NavDesktop = () => {
     );
 };
 
-export default NavDesktop;
+export default Nav;
