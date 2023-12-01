@@ -23,7 +23,6 @@ body {
 }
 
 .line {
-    @apply stroke-text-100;
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
