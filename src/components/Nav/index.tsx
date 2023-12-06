@@ -1,23 +1,23 @@
 "use client";
 import Image from "next/image";
-import Hamburger from "./Hamburger";
+import Hamburger from "../Hamburger";
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";
-import { useNav } from "./Nav.hooks";
+import { useNav } from "./hooks";
 
 const links = [
     {
         href: "/",
-        label: "Strona Główna",
+        label: "Strona Główna"
     },
     {
         href: "/oferta",
-        label: "Oferta",
+        label: "Oferta"
     },
     {
         href: "/kontakt",
-        label: "Kontakt",
-    },
+        label: "Kontakt"
+    }
 ];
 
 const Nav = () => {
@@ -36,8 +36,7 @@ const Nav = () => {
                                 <Link
                                     className={twMerge("text-xl tracking-wide text-text-100", isHero && "text-bg-100")}
                                     href={href}
-                                    onClick={handleClose}
-                                >
+                                    onClick={handleClose}>
                                     {label}
                                 </Link>
                             </li>
@@ -49,8 +48,7 @@ const Nav = () => {
                 className={twMerge(
                     "fixed w-full z-10 top-0 flex lg:hidden flex-col justify-between items-stretch gap-6 h-16 backdrop-blur-md transition-all duration-300",
                     isOpen && "h-screen bg-text-100/70"
-                )}
-            >
+                )}>
                 <div className="flex flex-row-reverse items-center gap-6 h-16 px-4">
                     <Hamburger onChange={toggleOpen} isLight={isHero || isOpen} isOpen={isOpen} />
                 </div>
