@@ -6,6 +6,6 @@ export const initialFormValues = {
 };
 
 export const schema = object({
-    email: string().email().required(),
+    email: string().required().email(),
     message: string().required()
 });

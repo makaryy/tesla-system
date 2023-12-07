@@ -19,13 +19,16 @@ const Offer = () => {
                 <Formik
                     initialValues={initialFormValues}
                     validationSchema={schema}
-                    onSubmit={(values, { setSubmitting }) => {
-                        setTimeout(() => {
-                            alert(JSON.stringify(values, null, 2));
-                            setSubmitting(false);
-                        }, 2400);
+                    onSubmit={async (values, { resetForm }) => {
+                        const res = await fetch("/send", {
+                            method: "POST",
+                            body: JSON.stringify({ data: values })
+                        });
+                        if (res.status === 200) {
+                            resetForm();
+                        }
                     }}>
-                    {({ isSubmitting, values, errors, touched, handleChange, handleBlur, handleSubmit }) => (
+                    {({ isSubmitting, values, errors, handleChange, handleBlur, handleSubmit }) => (
                         <form onSubmit={handleSubmit} className="flex flex-col gap-8">
                             <div className="relative">
                                 <motion.input
