@@ -1,4 +1,4 @@
-import { object, string } from "yup";
+import { number, object, string } from "yup";
 
 export const initialFormValues = {
     message: "",
@@ -7,5 +7,10 @@ export const initialFormValues = {
 
 export const schema = object({
     email: string().required().email(),
+    message: string().required()
+});
+
+export const resSchema = object({
+    status: number().required(),
     message: string().required()
 });

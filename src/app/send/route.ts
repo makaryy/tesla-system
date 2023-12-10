@@ -6,8 +6,6 @@ import { generateHtml, schema } from "./utils";
 export async function POST(request: NextRequest) {
     try {
         const body = await request.json();
-        console.log(body);
-
         const data = await schema.validate(body.data);
 
         const mailgun = new Mailgun(formData);
@@ -19,9 +17,11 @@ export async function POST(request: NextRequest) {
             subject: "Wiadomość ze strony tesla-system.pl",
             html: generateHtml(data.message)
         });
-        return Response.json({ status, message: "Message sent." });
+
+        console.log(`Message sent --> sender: ${data.email}`);
+        return Response.json({ status, message: "Wiadomość wysłana." });
     } catch (error) {
         console.error(error);
-        return Response.json({ status: 500, error });
+        return Response.json({ status: 500, message: "Wystąpił błąd podczas wysyłania wiadomości." });
     }
 }
