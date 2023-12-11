@@ -61,12 +61,18 @@ export default function Home() {
                                 <li>Zdalny dostęp do monitorowania obiektu z dowolnego miejsca</li>
                             </ul>
                             <div className="flex gap-4 my-6">
-                                <button className="border-2 border-accent-100 px-4 py-2 rounded-md text-text-100 capitalize text-sm hover:shadow-md transition-shadow">
+                                <Link
+                                    href="/oferta"
+                                    className="border-2 border-accent-100 px-4 py-2 rounded-md text-text-100 capitalize text-sm hover:shadow-md transition-shadow"
+                                >
                                     Więcej informacji
-                                </button>
-                                <button className="flex items-center gap-2 px-4 py-2 rounded-md capitalize text-sm text-text-100 hover:shadow-md transition-shadow">
+                                </Link>
+                                <Link
+                                    href="/kontakt"
+                                    className="flex items-center gap-2 px-4 py-2 rounded-md capitalize text-sm text-text-100 hover:shadow-md transition-shadow"
+                                >
                                     <span>Zgłoś się</span> <MdKeyboardArrowRight />
-                                </button>
+                                </Link>
                             </div>
                         </article>
                     </div>
@@ -124,12 +130,18 @@ export default function Home() {
                             </p>
 
                             <div className="flex gap-4 my-6">
-                                <button className="border-2 border-accent-100 px-4 py-2 rounded-md text-text-100 capitalize text-sm hover:shadow-md transition-shadow">
+                                <Link
+                                    href="/oferta"
+                                    className="border-2 border-accent-100 px-4 py-2 rounded-md text-text-100 capitalize text-sm hover:shadow-md transition-shadow"
+                                >
                                     Więcej informacji
-                                </button>
-                                <button className="flex items-center gap-2 px-4 py-2 rounded-md capitalize text-sm text-text-100 hover:shadow-md transition-shadow">
+                                </Link>
+                                <Link
+                                    href="/kontakt"
+                                    className="flex items-center gap-2 px-4 py-2 rounded-md capitalize text-sm text-text-100 hover:shadow-md transition-shadow"
+                                >
                                     <span>Zgłoś się</span> <MdKeyboardArrowRight />
-                                </button>
+                                </Link>
                             </div>
                         </article>
                     </div>

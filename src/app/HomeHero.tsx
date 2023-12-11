@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const HomeHero = () => {
     return (
         <section className="relative flex gap-6 px-7 lg:px-20 pb-6 pt-20 justify-between items-center bg-fixed bg-cover bg-[url('/hero.jpg')] min-h-screen w-full before:content-[''] before:absolute before:inset-0 before:bg-black/50">
@@ -12,12 +14,18 @@ const HomeHero = () => {
                         dorych rękach.
                     </p>
                     <div className="flex gap-4 my-6">
-                        <button className="border-2 border-primary-100 px-6 py-3 rounded-md bg-primary-100 text-bg-100 capitalize text-sm hover:shadow-sm transition-shadow">
+                        <Link
+                            href="/oferta"
+                            className="border-2 border-primary-100 px-6 py-3 rounded-md bg-primary-100 text-bg-100 capitalize text-sm hover:shadow-sm transition-shadow"
+                        >
                             Oferta
-                        </button>
-                        <button className="border-2 border-bg-100 px-6 py-3 rounded-md capitalize text-sm text-bg-100 hover:shadow-sm transition-shadow">
+                        </Link>
+                        <Link
+                            href="/kontakt"
+                            className="border-2 border-bg-100 px-6 py-3 rounded-md capitalize text-sm text-bg-100 hover:shadow-sm transition-shadow"
+                        >
                             Skontaktuj się
-                        </button>
+                        </Link>
                     </div>
                 </article>
             </div>
