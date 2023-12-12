@@ -15,6 +15,10 @@ const links = [
         label: "Oferta"
     },
     {
+        href: "/onas",
+        label: "O Nas"
+    },
+    {
         href: "/kontakt",
         label: "Kontakt"
     }
