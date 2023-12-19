@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import AboutUsSlider from "./AboutUsSlider";
+import { getImages } from "./utils";
 
 export const metadata: Metadata = {
     title: "O Nas - Doświadczenie i Profesjonalizm w Dziedzinie Bezpieczeństwa",
@@ -8,11 +9,15 @@ export const metadata: Metadata = {
     keywords: "doświadczenie w systemach bezpieczeństwa, profesjonalizm, projektowanie systemów bezpieczeństwa, instalacje bezpieczeństwa"
 };
 
-const About = () => {
+export const revalidate = 3600;
+
+const About = async () => {
+    const images = await getImages();
+
     return (
         <div className="flex-grow p-4 lg:p-8 mt-16 self-center w-full max-w-8xl mx-auto">
             <h1 className="text-4xl font-bold mb-8 text-center">O nas</h1>
-            <p className="text-lg mb-8 text-justify">
+            <p className="text-lg mb-8 ">
                 Jesteśmy nie tylko firmą z wieloletnim doświadczeniem w branży, ale również zespołem pasjonatów, dla których każdy projekt to nie
                 tylko wyzwanie, ale przede wszystkim szansa na tworzenie czegoś wyjątkowego. Naszą misją jest nie tylko dostarczanie kompleksowych
                 rozwiązań w zakresie systemów bezpieczeństwa, zarządzania budynkiem i instalacji elektrycznych, ale także budowanie trwałych relacji
@@ -35,7 +40,7 @@ const About = () => {
                 zaangażowanie i duma z tego, że możemy być częścią historii sukcesu każdego projektu.
             </p>
 
-            <AboutUsSlider />
+            <AboutUsSlider images={images} />
         </div>
     );
 };
