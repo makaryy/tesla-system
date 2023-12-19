@@ -11,7 +11,9 @@ export const metadata: Metadata = {
 const Contact = () => {
     return (
         <div className="flex-grow p-4 lg:p-8 mt-16 self-center w-full max-w-lg mx-auto">
-            <h1 className="text-4xl font-bold mb-8 text-center">Skontaktuj się</h1>
+            <h1 className="text-4xl font-bold mb-4 text-center">Skontaktuj się</h1>
+            <p className="text-center font-semibold text-lg">+48 609 845 568</p>
+            <p className="text-center font-semibold text-lg mb-8">biuro@teslasystem.pl</p>
             <ContactForm />
         </div>
     );

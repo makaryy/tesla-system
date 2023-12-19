@@ -12,9 +12,9 @@ export async function POST(request: NextRequest) {
         const mg = mailgun.client({ username: "api", key: process.env.MAILGUN_API_KEY! });
 
         const { status } = await mg.messages.create(process.env.MAILGUN_DOMAIN!, {
-            to: "makaryyrakam@gmail.com",
+            to: "biuro@teslasystem.pl",
             from: data.email,
-            subject: "Wiadomość ze strony tesla-system.pl",
+            subject: "Wiadomość ze strony teslasystem.pl",
             html: generateHtml(data.message)
         });
 
