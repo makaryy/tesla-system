@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { ContactForm } from "./ContactForm";
+import { ContactForm } from "../../components/kontakt/ContactForm";
 
 export const metadata: Metadata = {
     title: "Kontakt - Skontaktuj się z Nami w Sprawie Systemów Bezpieczeństwa",
@@ -8,12 +8,16 @@ export const metadata: Metadata = {
     keywords: "kontakt, systemy bezpieczeństwa, pytania dotyczące bezpieczeństwa, rozwiązania bezpieczeństwa"
 };
 
+const title = "Skontaktuj się";
+const phoneNumber = "+48 609 845 568";
+const email = "biuro@teslasystem.pl";
+
 const Contact = () => {
     return (
         <div className="flex-grow p-4 lg:p-8 mt-16 self-center w-full max-w-lg mx-auto">
-            <h1 className="text-4xl font-bold mb-4 text-center">Skontaktuj się</h1>
-            <p className="text-center font-semibold text-lg">+48 609 845 568</p>
-            <p className="text-center font-semibold text-lg mb-8">biuro@teslasystem.pl</p>
+            <h1 className="text-4xl font-bold mb-4 text-center">{title}</h1>
+            <p className="text-center font-semibold text-lg">{phoneNumber}</p>
+            <p className="text-center font-semibold text-lg mb-8">{email}</p>
             <ContactForm />
         </div>
     );

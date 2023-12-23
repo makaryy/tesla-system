@@ -27,6 +27,7 @@ const AboutUsSlider = ({ images }: AboutUsSliderProps) => {
                         className="w-full h-full aspect-[3/2] object-cover rounded-md"
                         height={height}
                         width={width}
+                        priority
                     />
                 ))}
             </Slider>

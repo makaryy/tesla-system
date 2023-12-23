@@ -1,5 +1,5 @@
 "use client";
-import Loader from "@/components/Loader";
+import Loader from "@/components/shared/Loader";
 import { Formik } from "formik";
 import { twMerge } from "tailwind-merge";
 import { initialFormValues, schema } from "./utils";
@@ -15,8 +15,7 @@ export const ContactForm = () => {
             validateOnBlur={false}
             validateOnChange={false}
             validateOnMount={false}
-            onSubmit={onSubmit}
-        >
+            onSubmit={onSubmit}>
             {({ isSubmitting, values, errors, handleChange, handleBlur, handleSubmit }) => (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-8">
                     <div className="relative">
@@ -38,8 +37,7 @@ export const ContactForm = () => {
                             className={twMerge(
                                 "absolute top-2 left-4 peer-focus:-translate-y-7 peer-focus:-translate-x-[2px] peer-focus:scale-90 transition-transform pointer-events-none",
                                 values.email && "-translate-y-7 scale-90 -translate-x-[2px]"
-                            )}
-                        >
+                            )}>
                             E-mail
                         </label>
                         {errors.email && <div className="ml-4 text-sm first-letter:uppercase text-red-500">{errors.email}</div>}
@@ -65,8 +63,7 @@ export const ContactForm = () => {
                             className={twMerge(
                                 "absolute top-2 left-4 peer-focus:-translate-y-7 peer-focus:-translate-x-[2px] peer-focus:scale-90 transition-transform pointer-events-none",
                                 values.message && "-translate-y-7 scale-90 -translate-x-[2px]"
-                            )}
-                        >
+                            )}>
                             Wiadomość
                         </label>
                         {errors.message && <div className="ml-4 text-sm first-letter:uppercase text-red-500">{errors.message}</div>}
@@ -77,8 +74,7 @@ export const ContactForm = () => {
                         className={twMerge(
                             "h-10 px-4 py-2 rounded-md hover:bg-primary-200 bg-primary-100 text-bg-100 transition-colors",
                             isSubmitting && "bg-primary-200"
-                        )}
-                    >
+                        )}>
                         {isSubmitting ? <Loader /> : "Wyślij"}
                     </button>
 
@@ -87,8 +83,7 @@ export const ContactForm = () => {
                             className={twMerge(
                                 "px-6 py-3 border-2 rounded-md text-center text-text-100",
                                 alert.type === "success" ? "border-green-600" : "border-red-500"
-                            )}
-                        >
+                            )}>
                             {alert.message}
                         </p>
                     )}

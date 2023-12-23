@@ -3,10 +3,7 @@ import { ImagesResponse } from "./types";
 import { cache } from "react";
 
 const formatUrl = (url: string) => {
-    return url.replace(
-        `http://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/image/upload`,
-        `http://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/image/upload/ar_1.5,c_auto,w_1100`
-    );
+    return url.replace(`http://res.cloudinary.com/dqyhe8ogi/image/upload`, `http://res.cloudinary.com/dqyhe8ogi/image/upload/ar_1.5,c_auto,w_1100`);
 };
 
 const FALLBACK_IMAGES = [

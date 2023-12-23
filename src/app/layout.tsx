@@ -1,8 +1,8 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import Nav from "../components/Nav";
+import Nav from "../components/shared/Nav";
 import { twMerge } from "tailwind-merge";
-import Footer from "@/components/Footer";
+import Footer from "@/components/shared/Footer";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
