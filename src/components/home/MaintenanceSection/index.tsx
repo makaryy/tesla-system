@@ -4,7 +4,7 @@ import Image from "next/image";
 const title = "Zapewnij prawidłowe funkcjonowanie wszystkich systemów dzięki naszym usługom konserwacyjnym";
 const description =
     "Nasze usługi konserwacyjne mają na celu utrzymanie systemów bezpieczeństwa, telewizji przemysłowej, sygnalizacji pożaru i instalacji elektrycznych w optymalnym stanie. Regularne przeglądy i naprawy zapewniają prawidłowe działanie wszystkich systemów i spokój ducha.";
-const image = { src: "/maintenance.jpg", alt: "" };
+const image = { src: "https://res.cloudinary.com/dqyhe8ogi/image/upload/v1703342228/tesla-system/maintenance_rggatd.jpg", alt: "Tools and screws" };
 
 const MaintenanceSection = () => {
     return (
