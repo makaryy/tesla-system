@@ -1,3 +1,5 @@
+import OfferItem from "@/components/oferta/OfferItem";
+import OfferItems from "@/components/oferta/OfferItems";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -86,19 +88,9 @@ const offerItems = [
 
 const Offer = () => {
     return (
-        <div className="p-4 lg:p-8 mt-16 self-center">
-            <h1 className="text-4xl font-bold mb-4">Oferta</h1>
-            {offerItems.map(({ items, subtitle, title }) => (
-                <div key={title} className="mb-8">
-                    <h2 className="text-2xl font-semibold mb-2">{title}</h2>
-                    <p className="text-lg">{subtitle}</p>
-                    <ul className="list-disc ml-6">
-                        {items.map((item) => (
-                            <li key={item}>{item}</li>
-                        ))}
-                    </ul>
-                </div>
-            ))}
+        <div className="p-4 lg:p-8 mt-16 self-center w-full">
+            <h1 className="text-4xl font-bold mb-4 text-center">Oferta</h1>
+            <OfferItems offerItems={offerItems} />
         </div>
     );
 };
